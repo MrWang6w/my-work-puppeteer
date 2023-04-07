@@ -18,7 +18,7 @@
     "playwright": "^1.13.1"
   },
   "scripts": {
-    "install": "npm i && npx playwright install-deps --unstable --force-yes && npx playwright install"
+    "install": "npm i && npx playwright install-deps --force-yes && npx playwright install"
   },
   "playwright": {
     "install": true,
