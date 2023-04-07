@@ -11,15 +11,13 @@
     "MY_SECRET": "puppeteer-vercel",
     "NODE_ENV": "production"
   },
-  "config": {
-    "shell": {
-      "/bin/bash": [
-        "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
-        "sudo apt-get install -y nodejs",
-        "sudo apt-get install -y libgbm1 libnss3 libasound2",
-        "npm install -g playwright",
-        "npx playwright install-deps"
-      ]
-    }
+  "shell": {
+    "/bin/bash": [
+      "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -",
+      "sudo apt-get install -y nodejs",
+      "sudo apt-get install -y libgbm1 libnss3 libasound2",
+      "npm install -g playwright",
+      "npx playwright install-deps"
+    ]
   }
 }
