@@ -1,14 +1,35 @@
 {
-  "name": "puppeteer-vercel",
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" }
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    { "src": "/", "dest": "/index.js" }
+    {
+      "src": "/get",
+      "methods": ["POST","GET"],
+      "handle": "index.js"
+    }
   ],
   "env": {
-    "MY_SECRET": "puppeteer-vercel",
-    "NODE_ENV": "production"
-  }
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/playwright_browsers"
+  },
+  "functions": {
+    "index": {
+      "memory": 1024,
+      "runtime": "vercel-node@1.0.0",
+      "maxDuration": 60
+    }
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "package-lock.json"
+  ],
+  "dependencies": {
+    "playwright": "^1.14.0"
+  },
+  "settings": {}
 }
