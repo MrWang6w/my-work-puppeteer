@@ -3,8 +3,9 @@ const playwright = require('playwright');
 
 const app = express();
 const port = process.env.PORT || 3000;
+console.log('playwright:', playwright);
 
-app.get('/', async (req, res) => {
+app.get('/get', async (req, res) => {
   const url = req.query.url;
   if (!url) {
     return res.status(400).send('Missing url parameter');
