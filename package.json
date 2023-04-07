@@ -10,14 +10,18 @@
     "node": "14.x",
     "npm": "7.x"
   },
-  "scripts": {
-    "install": "npm i puppeteer --ignore-scripts || true"
-  },
   "resolutions": {
     "playwright": "1.10.0"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "puppeteer": "^19.8.3"
+    "playwright": "^1.13.1"
+  },
+  "scripts": {
+    "install": "npm i && npx playwright install-deps && npx playwright install"
+  },
+  "playwright": {
+    "install": true,
+    "chromium": "^1.13.1"
   }
 }
