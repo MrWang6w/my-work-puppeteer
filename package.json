@@ -1,0 +1,23 @@
+{
+  "name": "puppeteer-vercel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
+  "scripts": {
+    "install": "npm i puppeteer --ignore-scripts || true"
+  },
+  "resolutions": {
+    "playwright": "1.10.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.8.3"
+  }
+}
